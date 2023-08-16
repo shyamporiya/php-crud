@@ -1,10 +1,14 @@
 <?php
 // echo "hello";die;
+// echo "hello";die;
+// echo "hello";die;
+// echo "hello";die;
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "data_structure";
 // Create connection
+
 $conn = mysqli_connect($servername,$username,$password,$database);
 
 $f_name = $_POST['f_name'];
