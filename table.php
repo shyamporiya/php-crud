@@ -4,6 +4,10 @@
 table, th, td {
   border:1px solid black;
 }
+img{
+    width: 90px;
+    height: 70px;
+}
 </style>
 <body>
 <?php
@@ -25,9 +29,10 @@ $result = mysqli_query($conn,$sql);
   <a href="table.php">Table</a>
 
 <h2>Data</h2>
-<div>
-<div>
+<div class="row">
+<div class="m-b-5">
   <input type="text" class="" id="search" />
+  <label>Search Data</label>
 </div>
 </div>
 <table style="width:100%">
@@ -37,20 +42,31 @@ $result = mysqli_query($conn,$sql);
     <th>LastName</th>
     <th>Email</th>
     <th>Mobile</th>
-    <th>Created At</th>
+    <th>Image</th>
+    <th>Status</th>
+    <th>Date Time</th>
   </tr>
   
   <tbody id="table_body">
   <?php 
+  $i = 1;
     while($row = mysqli_fetch_array($result)){
     echo "<tr>";
-    echo "<td>".$row['id']."</td>";
+    echo "<td>".$i."</td>";
     echo "<td>".$row['fname']."</td>";
     echo "<td>".$row['lname']."</td>";
     echo "<td>".$row['email']."</td>";
     echo "<td>".$row['mobile']."</td>";
+    if($row['image']){
+    echo "<td><img src=".$row['image']."></td>";
+    }else{
+    echo "<td><img src=uploads/avtar.png></td>";
+    
+    }
+    echo "<td>".$row['status']."</td>";
     echo "<td>".$row['date_time']."</td>";
     echo "</tr>";
+    $i++;
   }
   $conn->close();
   ?>

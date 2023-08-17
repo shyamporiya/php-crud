@@ -1,8 +1,4 @@
 <?php
-// echo "hello";die;
-// echo "hello";die;
-// echo "hello";die;
-// echo "hello";die;
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,6 +11,7 @@ $f_name = $_POST['f_name'];
 $l_name = $_POST['l_name'];
 $email = $_POST['email'];
 $mobile = $_POST['mobile'];
+$password = $_POST['password'];
 
   $target_dir = "uploads/"; // Directory where you want to store uploaded images
   $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -27,8 +24,9 @@ $mobile = $_POST['mobile'];
   echo "The file " . basename($_FILES["image"]["name"]) . " has been uploaded.";
   }
 }
-$sql = "INSERT INTO `sign_ups`(`fname`, `lname`,`email`,`mobile`, `image`)
-                      VALUES ('".$f_name."','".$l_name."','".$email."','".$mobile."','".$target_file."') ";
+$sql = "INSERT INTO `sign_ups`(`fname`, `lname`,`email`,`mobile`,`password`,`image`)
+                      VALUES ('".$f_name."','".$l_name."','".$email."','".$mobile."',
+                                '".$password."','".$target_file."') ";
             // echo $sql;die;//print_r($sql);
 $result = mysqli_query($conn,$sql);
   //  print_r($result);
