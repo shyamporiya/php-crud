@@ -104,6 +104,7 @@ input:hover{
           <div class="row center_form">
               <form id="student_form" action="save.php" method="POST" enctype="multipart/form-data">
                 <h3><b>Create Account</b></h3>
+                <h3><b>Registration Form</b></h3>
                 
 
                 <div class="row">
