@@ -75,5 +75,15 @@ input:hover{
     font-weight: 700;
     
 }
+.sing-in-btn{
+        width: 200px;
+        color: aliceblue;
+    font-weight: 800;
+}
+.sing-up-btn{
+        width: 190px;
+        color: aliceblue;
+    font-weight: 800;
+}
   </style>
   <body>

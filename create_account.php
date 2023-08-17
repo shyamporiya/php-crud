@@ -59,12 +59,17 @@
                   </div>
                  
                 <div class="pt-3">
-                  <button type="submit" id="submit" class="btn btn-warning btn-lg ms-2">Submit</button>
-                  <button type="reset" class="btn btn-light btn-lg">Reset</button>
+                  <a type="submit" id="submit" class="btn btn-warning sing-up-btn">Submit</a>
+                  <a type="button" class="btn btn-warning sing-up-btn">Forgot Password</a>
                 </div>
                 </form>
-            
-            
+                <div class="pt-3">
+                  <span class="btn sign-in-btn bg-grey" style="color:yellow">Already Have an Account</span>
+                  <a href="sign-in.php" class="btn btn-light sign-in-btn">Sign In</a>
+                </div>
+                
+                
+                
 
         </div>
       </div>

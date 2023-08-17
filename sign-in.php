@@ -7,7 +7,7 @@
   <div class="container" style="margin-top: 40px;">
     
         
-          <div class="row center_form">
+          <div class="container center_form">
               <form id="student_form" action="login.php" method="POST" enctype="multipart/form-data">
                 <h3><b>Login Account</b></h3>
                 <div class="row">
@@ -26,10 +26,17 @@
                  
                  
                 <div class="pt-3">
-                  <button type="submit" id="submit" class="btn btn-warning btn-lg ms-2">Login</button>
-                  <button type="button" class="btn btn-light btn-lg m-l-20">Forgot Password</button>
+                  <a type="submit" id="submit" class="btn btn-warning sing-in-btn">Login</a>
+                  <a type="button" class="btn btn-warning sing-in-btn">Forgot Password</a>
                 </div>
                 </form>
+    
+                <div class="pt-3">
+                  <span class="btn sign-in-btn bg-grey" style="color:yellow">Don't Have a Account</span>
+                  <a href="create_account.php" class="btn btn-light sign-in-btn">Sign Up</a>
+                </div>
+
+                
             
             
 
