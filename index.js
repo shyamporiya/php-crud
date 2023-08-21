@@ -1,3 +1,8 @@
+$(document).ready(function () {
+  $(".welcome_msg").delay(5000).fadeOut();
+  $(".alert-success").delay(5000).fadeOut();
+});
+
 // $().ready(function() {
 //             // validate the comment form when it is submitted
 //            // $("#signup").validate();
@@ -55,7 +60,7 @@
 //                     },
 //                     email: "Please enter a valid email address",
 //                     agree: "Please accept our policy"
-//                     }, 
+//                     },
 //         submitHandler: function(form) {
 //         $.ajax({
 //             url: 'save.php',
@@ -64,7 +69,7 @@
 //             success: function(response) {
 //                // $('#answers').html(response);
 //                alert('done');
-//             }            
+//             }
 //         });
 //     }
 //             });

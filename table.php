@@ -45,6 +45,8 @@ $result = mysqli_query($conn,$sql);
     <th>Image</th>
     <th>Status</th>
     <th>Date Time</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
   
   <tbody id="table_body">
@@ -65,6 +67,8 @@ $result = mysqli_query($conn,$sql);
     }
     echo "<td>".$row['status']."</td>";
     echo "<td>".$row['date_time']."</td>";
+    echo "<td><button class='btn-xs btn-danger edit-btn' update-id=".$row['id'].">Edit</button></td>";
+    echo "<td><a class='delete-btn' delete-id=".$row['id'].">Delete</a></td>";
     echo "</tr>";
     $i++;
   }
@@ -95,7 +99,20 @@ $.ajax({
   console.warn("Text is : " + response);
   $("#table_body").html(response);
   }
-})
+      });
+  });
+
+  $('.edit-btn').click(function(){
+    var edit_id = $(this).attr('update-id');
+    console.log('edit click'+ edit_id);
+    $.ajax({
+      url:"getdata.php",
+      type:"POST",
+      data:{editId:edit_id},
+      success:function(resp){
+        console.log('update id');
+      }
+    });
   });
 </script>
 

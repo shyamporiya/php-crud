@@ -13,9 +13,16 @@ $password = $_POST['password'];
 
 $sql = "SELECT * FROM `sign_ups` WHERE `mobile` = '".$_POST['mobile']."' AND `password` = '".$_POST['password']."' ";
 $result = mysqli_query($conn,$sql);
-//   echo "<pre>";print_r($result);die;
+$name = "SELECT fname FROM  `sign_ups` WHERE `mobile` = ".$mobile." ";
+$result1 = mysqli_query($conn,$name);
+$name = mysqli_fetch_assoc($result1);
+// echo "<pre>";print_r($name['fname']);die;
+$username = $name['fname'];
 if(mysqli_num_rows($result) == 1){
-    echo "Login Successfully";
+
+    // echo $name;die;
+    // echo "Login Successfully";
+    header("Location:index.php?login=".$username." ");
 }else if(mysqli_num_rows($result) == 0){
     echo "No Record Found";
 }else{

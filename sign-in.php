@@ -5,7 +5,13 @@
   <a href="table.php">Table</a>
 
   <div class="container" style="margin-top: 40px;">
-    
+     <?php
+        if($_REQUEST['login'] !== ""){ 
+          
+         $logisSuccess = '<div class="alert alert-success">Welcome '.$_REQUEST['login'].' - Login Successfully</div>';
+        }else{
+          $loginSuccess = "";
+        }?>
         
           <div class="container center_form">
               <form id="student_form" action="login.php" method="POST" enctype="multipart/form-data">
@@ -26,7 +32,7 @@
                  
                  
                 <div class="pt-3">
-                  <a type="submit" id="submit" class="btn btn-warning sing-in-btn">Login</a>
+                  <button type="submit" id="submit" class="btn btn-warning sing-in-btn">Login</button>
                   <a type="button" class="btn btn-warning sing-in-btn">Forgot Password</a>
                 </div>
                 </form>
