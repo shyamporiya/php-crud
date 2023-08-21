@@ -59,7 +59,7 @@
           </div>
 
           <div class="pt-3">
-            <a type="submit" id="submit" class="btn btn-warning sing-up-btn">Submit</a>
+            <button type="submit" id="submit" class="btn btn-warning sing-up-btn">Submit</button>
             <a type="button" class="btn btn-warning sing-up-btn">Forgot Password</a>
           </div>
       </form>

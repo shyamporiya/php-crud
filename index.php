@@ -6,15 +6,15 @@
   <div class="container" style="margin-top: 40px;">
     
         <?php
-        if($_REQUEST['login'] !== ""){ 
+        if(isset($_REQUEST['login']) && $_REQUEST['login'] !== ""){ 
           
          $logisSuccess = '<div class="alert alert-success welcome_msg">Welcome '.$_REQUEST['login'].' - Login Successfully</div>';
         }else{
           $loginSuccess = "";
         }?>
           <div class="row center_form">
-            <?php echo $logisSuccess; ?>
-            <h1>Welcome to your dashboard !!!!!</h1>
+            <?php echo $loginSuccess; ?>
+            <h1>your dashboard !!!!!</h1>
               <form id="student_form" action="save.php" method="POST" enctype="multipart/form-data">
                 <h3><b>Create Account</b></h3>
                 <div class="row">

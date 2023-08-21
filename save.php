@@ -15,15 +15,9 @@ $password = $_POST['password'];
 
   $target_dir = "uploads/"; // Directory where you want to store uploaded images
   $target_file = $target_dir . basename($_FILES["image"]["name"]);
-   // Check if the file already exists
-  if (file_exists($target_file)) {
-  echo "File already exists.";
-  } else {
   // Move the uploaded file to the specified directory
-  if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-  echo "The file " . basename($_FILES["image"]["name"]) . " has been uploaded.";
-  }
-}
+  move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
 $sql = "INSERT INTO `sign_ups`(`fname`, `lname`,`email`,`mobile`,`password`,`image`)
                       VALUES ('".$f_name."','".$l_name."','".$email."','".$mobile."',
                                 '".$password."','".$target_file."') ";
@@ -32,7 +26,7 @@ $result = mysqli_query($conn,$sql);
   //  print_r($result);
 if($result){
          echo "success";
-        //header("Location:create_account.php"); 
+        header("Location:create_account.php"); 
     }
 
 

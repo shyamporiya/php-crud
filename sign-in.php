@@ -11,7 +11,8 @@
          $logisSuccess = '<div class="alert alert-success">Welcome '.$_REQUEST['login'].' - Login Successfully</div>';
         }else{
           $loginSuccess = "";
-        }?>
+        }
+        ?>
         
           <div class="container center_form">
               <form id="student_form" action="login.php" method="POST" enctype="multipart/form-data">

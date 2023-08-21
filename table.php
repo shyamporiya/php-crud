@@ -109,8 +109,11 @@ $.ajax({
       url:"getdata.php",
       type:"POST",
       data:{editId:edit_id},
+      dataType:"JSON",
       success:function(resp){
-        console.log('update id');
+        console.log('update id',resp);
+        console.log(resp.id);
+        console.log(resp.fname);
       }
     });
   });
