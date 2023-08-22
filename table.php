@@ -114,6 +114,7 @@ $.ajax({
         console.log('update id',resp);
         console.log(resp.id);
         console.log(resp.fname);
+        $("#")
       }
     });
   });

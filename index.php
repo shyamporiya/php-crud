@@ -6,9 +6,9 @@
   <div class="container" style="margin-top: 40px;">
     
         <?php
-        if(isset($_REQUEST['login']) && $_REQUEST['login'] !== ""){ 
+        if(isset($_REQUEST['login']) && $_REQUEST['login'] != ""){ 
           
-         $logisSuccess = '<div class="alert alert-success welcome_msg">Welcome '.$_REQUEST['login'].' - Login Successfully</div>';
+         $loginSuccess = '<div class="alert alert-success welcome_msg">Welcome '.$_REQUEST['login'].' - Login Successfully</div>';
         }else{
           $loginSuccess = "";
         }?>
@@ -66,7 +66,7 @@
                   </div>
                  
                 <div class="pt-3">
-                  <a type="submit" id="submit" class="btn btn-warning sing-up-btn">Submit</a>
+                  <button type="submit" id="submit" class="btn btn-warning sing-up-btn">Submit</button>
                   <a type="button" class="btn btn-warning sing-up-btn">Forgot Password</a>
                 </div>
                 </form>
